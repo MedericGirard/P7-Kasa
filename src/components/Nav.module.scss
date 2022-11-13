@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+    width: 300px;
+    color: #ff6060;
+    font-size: 24px;
+    &__accueil {
+        padding-right: 57px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        font-size: 18px;
+        width: auto;
+        &__accueil {
+            padding-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .nav {
+        font-size: 12px;
+    }
+}

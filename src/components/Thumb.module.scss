@@ -1,0 +1,34 @@
+.thumb {
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 56px;
+    &__image {
+        object-fit: cover;
+        border-radius: 10px;
+        filter: brightness(0.8);
+        height: 340px;
+        width: 340px;
+    }
+    a {
+        position: relative;
+    }
+    h2 {
+        position: absolute;
+        bottom: 10%;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+    }
+}
+
+@media (max-width: 375px) {
+    .thumb {
+        margin-right: 19px;
+        margin-bottom: 20px;
+        &__image {
+            width: 335px;
+            height: 255px;
+        }
+    }
+}

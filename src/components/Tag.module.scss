@@ -1,0 +1,28 @@
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff6060;
+    border-radius: 10px;
+    width: 120px;
+    height: 25px;
+    color: #ffffff;
+    font-size: 11px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.tag_content {
+    font-size: 12px;
+}
+
+@media (max-width: 375px) {
+    .tag {
+        width: 84px;
+        height: 18px;
+        margin-bottom: 0px;
+    }
+    .tag_content {
+        font-size: 8px;
+    }
+}

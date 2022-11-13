@@ -1,0 +1,42 @@
+.body {
+    margin: 100px 100px 0 100px;
+    h2 {
+        font-size: 48px;
+        line-height: 68px;
+        letter-spacing: 0em;
+        position: absolute;
+        margin-left: 0.6em;
+        margin-top: 1.5em;
+        color: white;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-top: 70px;
+    border-radius: 25px;
+    background-color: #f6f6f6;
+}
+
+@media (max-width: 768px) {
+    .body {
+        margin: 0 20px 0 20px;
+    }
+
+    .gallery {
+        background-color: white;
+        margin-top: 40px;
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 375px) {
+    .gallery {
+        margin-top: 22px;
+        margin-bottom: 20px;
+    }
+}

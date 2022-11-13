@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+h1,
+h2,
+h3,
+p,
+a,
+span,
+.button,
+.stage__number {
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.container__title h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+    &:visited {
+        color: inherit;
+    }
+    &:link {
+        color: black;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}

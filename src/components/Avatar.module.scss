@@ -1,0 +1,41 @@
+.avatar {
+    display: flex;
+    align-items: center;
+    &_name p {
+        margin-right: 10px;
+        width: 93px;
+        height: 52px;
+        left: 1170px;
+        top: 573px;
+
+        font-size: 18px;
+        line-height: 142.6%;
+
+        display: flex;
+        align-items: flex-end;
+        text-align: right;
+
+        color: #ff6060;
+    }
+    &_pictures img {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (max-width: 375px) {
+    .avatar {
+        &_name p {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            width: 50px;
+            height: 0px;
+        }
+        &_pictures img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
