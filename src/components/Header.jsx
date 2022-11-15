@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import Nav from './Nav';
-
 import logo from '../assets/logo.png';
 
 function Header() {

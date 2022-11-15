@@ -45,21 +45,25 @@ function Slideshow(props) {
                     />
                 ))}
             </div>
-            <div className={`${styles.slideshow_controls}`}>
-                <img
-                    src="../src/assets/chevron_left.png"
-                    className={styles.chevron}
-                    onClick={onPrev}
-                />
-                <img
-                    src="../src/assets/chevron_right.png"
-                    className={styles.chevron}
-                    onClick={onNext}
-                />
-            </div>
-            <div className={`${styles.slideshow_idx}`}>
-                {slideIdx + 1} / {props.img.length}
-            </div>
+            {props.img.length != 1 && (
+                <div className={`${styles.slideshow_controls}`}>
+                    <img
+                        src="../src/assets/chevron_left.png"
+                        className={styles.chevron}
+                        onClick={onPrev}
+                    />
+                    <img
+                        src="../src/assets/chevron_right.png"
+                        className={styles.chevron}
+                        onClick={onNext}
+                    />
+                </div>
+            )}
+            {props.img.length != 1 && (
+                <div className={`${styles.slideshow_idx}`}>
+                    {slideIdx + 1} / {props.img.length}
+                </div>
+            )}
         </div>
     );
 }
