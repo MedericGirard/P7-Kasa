@@ -10,7 +10,6 @@ function Thumb({ data }) {
                 to={{
                     pathname: `/products/${data.id}`,
                 }}
-                state={data}
             >
                 <img
                     className={`${styles.thumb__image}`}
