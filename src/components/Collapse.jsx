@@ -4,32 +4,33 @@ import './Collapse.css';
 import chevron from '../assets/chevron_down.png';
 
 function Collapse(props) {
-    const [Active, setActive] = useState('');
-    const [Height, setHeight] = useState('0px');
+    const [Toggle, setToggle] = useState('');
 
     const content = useRef(null);
 
-    function toggleCollapse() {
-        setActive(Active === '' ? 'active' : '');
-        setHeight(
-            Active === 'active' ? '0px' : `${content.current.scrollHeight}px`
-        );
+    function toggle() {
+        setToggle(Toggle === '' ? 'toggle' : '');
     }
 
     return (
         <div className="collapse__section">
-            <button className={`collapse ${Active}`} onClick={toggleCollapse}>
+            <button className={`collapse ${Toggle}`} onClick={toggle}>
                 <p className="collapse__title">{props.title}</p>
                 <img
                     className={`collapse__icon ${
-                        Active === 'active' ? 'rotate' : ''
+                        Toggle === 'toggle' ? 'rotate' : ''
                     }`}
                     src={chevron}
                 ></img>
             </button>
             <div
                 ref={content}
-                style={{ maxHeight: `${Height}` }}
+                style={{
+                    maxHeight:
+                        Toggle === 'toggle'
+                            ? `${content.current.scrollHeight}px`
+                            : '0px',
+                }}
                 className="collapse__content"
             >
                 <div>

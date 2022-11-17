@@ -13,11 +13,11 @@ const EmptyStar = () => {
 export default function Stars({ rating }) {
     return (
         <div className={`${styles.stars}`}>
-            {Array.from({ length: parseInt(rating) }, (element, id) => (
-                <FullStar key={'full-' + id} />
+            {Array.from({ length: parseInt(rating) }, (element, i) => (
+                <FullStar key={'full-' + i} />
             ))}
-            {Array.from({ length: 5 - parseInt(rating) }, (element, id) => (
-                <EmptyStar key={'empty-' + id} />
+            {Array.from({ length: 5 - parseInt(rating) }, (element, i) => (
+                <EmptyStar key={'empty-' + i} />
             ))}
         </div>
     );

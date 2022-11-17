@@ -10,10 +10,9 @@
     font-size: 11px;
     margin-right: 10px;
     margin-bottom: 20px;
-}
-
-.tag_content {
-    font-size: 12px;
+    &_content {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 375px) {

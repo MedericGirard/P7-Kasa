@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import NotFound from './NotFound';
-import Slideshow from '../components/Slideshow';
+import Gallery from '../components/Gallery';
 import styles from './Product.module.scss';
 import Avatar from '../components/Avatar';
 import Stars from '../components/Stars';
@@ -11,13 +11,7 @@ import Collapse from '../components/Collapse';
 
 function Fiche() {
     let { id } = useParams();
-    const [logements, setLogements] = useState({
-        tags: [],
-        equipments: [],
-        pictures: [],
-        rating: '',
-        host: { name: '', picture: '' },
-    });
+    const [logements, setLogements] = useState([]);
 
     useEffect(function () {
         fetch('../src/assets/logements.json')
@@ -39,7 +33,7 @@ function Fiche() {
         return (
             <div className={`${styles.product}`}>
                 <div className={`${styles.product_caroussel}`}>
-                    <Slideshow img={logements.pictures} />
+                    <Gallery img={logements.pictures} />
                 </div>
                 <div className={`${styles.product_presentation}`}>
                     <div className={`${styles.product_header}`}>
