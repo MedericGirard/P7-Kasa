@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+// import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import NotFound from './NotFound';
 import Gallery from '../components/Gallery';
@@ -8,26 +8,32 @@ import Avatar from '../components/Avatar';
 import Stars from '../components/Stars';
 import Tag from '../components/Tag';
 import Collapse from '../components/Collapse';
+import logementsData from '../assets/logements.json';
 
 function Fiche() {
     let { id } = useParams();
-    const [logements, setLogements] = useState([]);
+    // const [logements, setLogements] = useState([]);
 
-    useEffect(function () {
-        fetch('../src/assets/logements.json')
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                for (let i = 0; i < data.length; i++) {
-                    if (data[i].id == id) {
-                        setLogements(data[i]);
-                    }
-                }
-            });
-    }, []);
+    // useEffect(function () {
+    //     fetch('../src/assets/logements.json')
+    //         .then((response) => {
+    //             return response.json();
+    //         })
+    //         .then((data) => {
+    //             for (let i = 0; i < data.length; i++) {
+    //                 if (data[i].id == id) {
+    //                     setLogements(data[i]);
+    //                 }
+    //             }
+    //         });
+    // }, []);
 
-    if (logements.id != id) {
+    const logementsDataFilter = logementsData.filter(
+        (logements) => logements.id === id
+    );
+    const logements = logementsDataFilter[0];
+
+    if (logements === undefined) {
         return <NotFound />;
     } else {
         return (

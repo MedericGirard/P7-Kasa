@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import styles from './Stars.module.scss';
 
 const FullStar = () => {
-    return <img src="../src/assets/stars_full.png" alt="stars" />;
+    return <img src="../stars_full.png" alt="stars" />;
 };
 
 const EmptyStar = () => {
-    return <img src="../src/assets/stars_empty.png" alt="stars" />;
+    return <img src="../stars_empty.png" alt="stars" />;
 };
 
 export default function Stars({ rating }) {

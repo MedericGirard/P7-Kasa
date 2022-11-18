@@ -48,12 +48,12 @@ function Gallery(props) {
             {props.img.length > 1 && (
                 <div className={`${styles.gallery_chevron}`}>
                     <img
-                        src="../src/assets/chevron_left.png"
+                        src="../chevron_left.png"
                         className={styles.chevron}
                         onClick={Prev}
                     />
                     <img
-                        src="../src/assets/chevron_right.png"
+                        src="../chevron_right.png"
                         className={styles.chevron}
                         onClick={Next}
                     />
