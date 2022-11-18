@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import NotFound from './NotFound';
 import Gallery from '../components/Gallery';
@@ -12,21 +11,6 @@ import logementsData from '../assets/logements.json';
 
 function Fiche() {
     let { id } = useParams();
-    // const [logements, setLogements] = useState([]);
-
-    // useEffect(function () {
-    //     fetch('../src/assets/logements.json')
-    //         .then((response) => {
-    //             return response.json();
-    //         })
-    //         .then((data) => {
-    //             for (let i = 0; i < data.length; i++) {
-    //                 if (data[i].id == id) {
-    //                     setLogements(data[i]);
-    //                 }
-    //             }
-    //         });
-    // }, []);
 
     const logementsDataFilter = logementsData.filter(
         (logements) => logements.id === id
