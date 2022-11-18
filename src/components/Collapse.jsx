@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import './Collapse.css';
-import chevron from '../assets/chevron_down.png';
 
 function Collapse(props) {
     const [Toggle, setToggle] = useState('');
@@ -20,7 +19,7 @@ function Collapse(props) {
                     className={`collapse__icon ${
                         Toggle === 'toggle' ? 'rotate' : ''
                     }`}
-                    src={chevron}
+                    src="../chevron_down.png"
                 ></img>
             </button>
             <div

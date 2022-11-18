@@ -1,15 +1,13 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 
-import logoFooter from '../assets/footerlogo.png';
-
 function Footer() {
     const Year = new Date().getFullYear();
 
     return (
         <footer className={`${styles.footer}`}>
             <img
-                src={logoFooter}
+                src="../footerlogo.png"
                 alt="logo footer Kasa"
                 className={`${styles.footer__logo}`}
             />

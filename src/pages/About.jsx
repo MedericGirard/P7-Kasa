@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './About.module.scss';
-import bannerImage from '../assets/banner_about.png';
 import Collapse from '../components/Collapse';
 
 function About() {
@@ -9,7 +8,7 @@ function About() {
             <article className={`${styles.banner}`}>
                 <img
                     className={`${styles.banner__image}`}
-                    src={bannerImage}
+                    src="../banner_about.png"
                     alt="Paysage de montagne"
                 />
             </article>
