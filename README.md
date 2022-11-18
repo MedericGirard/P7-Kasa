@@ -11,4 +11,4 @@ Kasa est basé sur React, React Router et Javascript.
 
 1 - Installer les dépendances avec ```npm install```
 
-2 - Lancer le projet ```npm run dev```
+2 - Lancer le projet ```npm start```
